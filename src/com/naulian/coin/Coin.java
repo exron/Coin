@@ -1,5 +1,6 @@
 package com.naulian.coin;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -44,8 +45,8 @@ class Coin {
         float headPercent = (headSize/ (float) count) *100;
        float tailPercent= (tailSize/ (float) count) *100;
 
-       int headInt = (int) headPercent;
-       int tailInt=(int) tailPercent;
-        System.out.println(headInt+"% is Head \n"+tailInt+"% is Tail");
+       String headString = new DecimalFormat("##.#").format(headPercent);
+       String tailString = new DecimalFormat("##.#").format(tailPercent);
+        System.out.println(headString+"% is Head \n"+tailString+"% is Tail");
     }
 }
